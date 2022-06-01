@@ -32,8 +32,7 @@ function createTodo() {
     addInput.value = "";
 }
 
-function showEditInput(paragraph) {
-
+function showEditInput(paragraphElement) {
     var editInput = document.getElementsByName("editInput")[0];
     if (editInput) {
         editInput.remove();
@@ -50,7 +49,7 @@ function showEditInput(paragraph) {
 }
 
 function updateTodo() {
-    var editInput = document.getElementsByClassName("editInput")[0];
+    var editInput = document.getElementsByName("editInput")[0];
     if (!editInput) {
         return;
     }
@@ -73,16 +72,17 @@ function toggleComplete(inputElement) {
     if (inputElement.checked === false) {
         inputElement.parentElement.classList.remove("complete");
     } else {
-        inputElement.parentElement.classList.remove("complete");
+        inputElement.parentElement.classList.add("complete");
     }
 }
+
 list.addEventListener("click", function (event){
 
     event.stopPropagation();
 
     switch (event.target.tagName) {
         case "p":
-            showEditInput();
+            showEditInput(event.target);
             break;
         case "SPAN":
             removeTodo(event.target);
@@ -92,7 +92,7 @@ list.addEventListener("click", function (event){
 
 list.addEventListener("change", function (event) {
     if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
-        toggleComplete();
+        toggleComplete(event.target);
     }
 });
 
