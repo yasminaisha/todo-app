@@ -6,7 +6,6 @@ html{
     background-image: linear-gradient(to right top, #f287ee, #2d8dc5bf, #00d5ffd2, #00fff7, #00e4dd6f);
     width: 100%;
     height: 100%;
-    
 }
 
 body{
@@ -94,4 +93,36 @@ div#header button#todo-add-btn{
     font-size: 35px;
     border-radius: 20px;
     width: 200px;
+    box-sizing: border-box;
+    border-color: #f287ee;
 }
+
+div ul li {
+    max-width: auto;
+    color: white;
+    margin: 0;
+    padding: 7px 20px;
+    font-size: 20px;
+    background-color: #00d5ffd2;
+    align-items: center;
+    height: 40px;
+    flex: 5;
+    display: flex;
+    list-style-type: none;
+  }
+
+input.checkbox {
+    margin-left: 0;
+    margin-right: 0;
+    display: inline;
+  }
+
+  p {
+    margin-top: 20px;
+    margin-right: 300px;
+    position: center;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  
