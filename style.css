@@ -16,9 +16,10 @@ body{
 }
 
 input{
-    width: 100%;
+    /* width: 100%; */
     padding: 10px;
     font-size: 20px;
+    font-family: -apple-system;
 }
 
 div.container{
@@ -91,25 +92,12 @@ div#header button#todo-add-btn{
     background-color: #f287ee;
     color: rgba(247, 247, 247, 0.964);
     font-size: 35px;
+    font-family: -apple-system;
     border-radius: 20px;
     width: 200px;
     box-sizing: border-box;
     border-color: #f287ee;
 }
-
-div ul li {
-    max-width: auto;
-    color: white;
-    margin: 0;
-    padding: 7px 20px;
-    font-size: 20px;
-    background-color: #00d5ffd2;
-    align-items: center;
-    height: 40px;
-    flex: 5;
-    display: flex;
-    list-style-type: none;
-  }
 
 input.checkbox {
     margin-left: 0;
@@ -117,12 +105,20 @@ input.checkbox {
     display: inline;
   }
 
-  p {
-    margin-top: 20px;
-    margin-right: 300px;
-    position: center;
+div ul li {
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    background-color: #00d5ffd2;
     align-items: center;
-    white-space: nowrap;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 10px;
+    column-gap: 10px;
+    justify-items: center;
   }
 
-  
+span{
+    color: red;
+}
